@@ -1,4 +1,7 @@
 #include <stdio.h>
+/**
+ * main - represents all garbage in memory
+ */
 
 int main(void)
 {
