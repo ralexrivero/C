@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
+#include <stdlib.h>
 
 /**
  * main - the actual size of various integer types
@@ -26,10 +27,10 @@ int main(void)
     printf("long long int minimum value: %lld\n",LLONG_MIN);
     printf("long long int maximum value: %lld\n",LLONG_MAX);
     printf("unsigned long long int maximum value: %llu\n",ULLONG_MAX);
-    printf("float minimum value: %g\n", FLT_MIN);
-    printf("float maximum value: %g\n", FLT_MAX);
-    printf("double minimum value: %g\n", DBL_MIN);
-    printf("double maximum value: %g\n", DBL_MAX);
-    printf("long double minimum value: %g\n", LDBL_MIN);
-    printf("long double maximum value: %Lg\n", LDBL_MAX);
+    printf("float minimum value: %e\n",FLT_MIN);
+    printf("float maximum value: %e\n",FLT_MAX);
+    printf("double minimum value: %e\n",DBL_MIN);
+    printf("double maximum value: %e\n",DBL_MAX);
+    printf("long double minimum value: %le\n",LDBL_MIN);
+    printf("long double maximum value: %le\n",LDBL_MAX);
 }
