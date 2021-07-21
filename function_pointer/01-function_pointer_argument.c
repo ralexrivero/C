@@ -16,6 +16,6 @@ void wrapper(void (*fun)())
 int main()
 {
     wrapper(fun1);
-  /*  wrapper(fun2); */
+   wrapper(fun2);
     return (0);
 }
