@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdarg.h>
+#include "holberton.h"
+
 /**
  * _printf - prototype that takes an argument of type char
  * @format: function prototype declaration constant char.
@@ -10,7 +10,7 @@
  */
 
 /* int _printf(const char *format, ...) */
-int _printf(const char format)
+int _printf(const char *format)
 {
     int outLen;
     
@@ -21,19 +21,15 @@ int _printf(const char format)
      * 
      */
     
-    putchar(format);
-    putchar('\n');
+    _putchar(format);
+    _putchar('\n');
     printf("lenght of string: %i", outLen);
-    putchar("\n");
+    _putchar('\n');
     return(outLen);
-
-
-
-
 }
 
 int main(void)
 {
-    _printf('ronald');
+    _printf("r");
     return(0);
 }
