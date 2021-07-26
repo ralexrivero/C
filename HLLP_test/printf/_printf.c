@@ -1,35 +1,48 @@
 #include "holberton.h"
 
 /**
- * _printf - prototype that takes an argument of type char
- * @format: function prototype declaration constant char.
- * The formal parameter name and it too an automatic local variable
- * Only accesible by the function
- * Description: emulates printf stdio.h function
- * Return: integer number thats represent the lenght of the output
+ * _printf - emulate the original printf
+ * @format: string to print and format by specifier
+ * Description: create our own variadic prototype
+ * Return: lenght of the output
  */
 
-/* int _printf(const char *format, ...) */
-int _printf(const char *format)
+int _printf(const char *format, ...)
 {
-    int outLen;
-    
-    outLen = 1;
+	unsigned int i;
+    int len = 0;
+	va_list list;
 
-    /**
-     *  %c: prints the last character
-     * 
-     */
-    
-    _putchar(format);
-    _putchar('\n');
-    printf("lenght of string: %i", outLen);
-    _putchar('\n');
-    return(outLen);
-}
-
-int main(void)
-{
-    _printf("r");
-    return(0);
+	if (format)
+	{
+		va_start(list, format);
+		for (i = 0; format[i] != '\0'; i++)
+		{
+			if (format[i] != '%')
+			{
+				_putchar(format[i]);
+                len++;
+			}
+			if (format[i] == '%')
+			{
+				switch (format[i + 1])
+				{
+					case 's':
+						_putchar(p_str(va_arg(list,char *)));
+						break;
+					case 'd':
+						 _putchar(p_int(va_arg(list,int)));
+						break;
+					case '%':
+						_putchar(37);
+						break;
+					case '\n':
+						_putchar('\n');
+						break;
+				}
+			}
+		}
+		 va_end(list);
+	}
+	return (len);
 }

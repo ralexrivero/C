@@ -2,6 +2,8 @@
     "files.associations": {
         "stdio.h": "c",
         "holberton.h": "c",
-        "stdarg.h": "c"
+        "stdarg.h": "c",
+        "stdlib.h": "c",
+        "limits.h": "c"
     }
 }
