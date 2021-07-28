@@ -1,12 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 struct cuenta {
     char nombre[30];
     char apellido[40];
+    int identificador;
+    int saldo;
+};
+struct specificators {
+    char marcador[1];
+    char prototype[3];
 };
 
 int main(void)
 {
-    char array[] = {
+struct cuenta cuentaUno;
+cuentaUno.saldo = 400;
+
+    struct specificators marcador = {
         {"a", 2},
         {"b", 3},
         {"c", 4},
