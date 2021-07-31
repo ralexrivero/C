@@ -12,6 +12,6 @@ pa = 24;
  printf("valor de pa: %d\n", pa);
  printf("direccion de pa: %d\n", &pa);
  printf("direccion de pa: %x\n", &pa);
- printf("valor de puntero pa: %lli\n", *pa);
+ printf("valor de puntero pa: %p\n", pa);
 
 }
