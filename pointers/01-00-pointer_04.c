@@ -10,6 +10,6 @@ int main(void)
 
     printf("valor b: %i\n", *b);
     printf("valor b: %p\n", &b);
-
+    /* printf */
     return (0);
 }
