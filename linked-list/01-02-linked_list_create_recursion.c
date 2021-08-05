@@ -23,10 +23,14 @@ LINK string_to_list(char s[])
 /* to store an object type ELEMENT */
         head -> d = s[0];
 /* the memeber d of ELEMENT is assigned the first character of string */
+        printf("pointer: %p value: %c\n", head, head -> d);
+/* print the values */
+/* if print after the recursion, will print reverse*/
         head -> next = string_to_list(s + 1);
 /* pointer expresion: s + 1 points the remainder of string */
 /* call recursively */
-        printf("pointer: %p value: %c\n", head, head -> d);
+/* printf("pointer: %p value: %c\n", head, head -> d); */
+
         return (head);
 /* function exits and return the address of the head of the list */
     }
