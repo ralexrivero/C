@@ -26,6 +26,7 @@ LINK string_to_list(char s[])
         head -> next = string_to_list(s + 1);
 /* pointer expresion: s + 1 points the remainder of string */
 /* call recursively */
+        printf("pointer: %p value: %c\n", head, head -> d);
         return (head);
 /* function exits and return the address of the head of the list */
     }
@@ -39,7 +40,7 @@ int main(void)
 {
     char s[] = "hola";
 
-    string_to_list(s);
-
-    
+    char *head = string_to_list(s);
+    printf("head: %p\n", head);
+    return (0);
 }
