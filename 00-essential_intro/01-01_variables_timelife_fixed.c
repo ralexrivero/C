@@ -4,6 +4,7 @@
  * swap - swap values
  * main - call swap
  * with indirection * operator reference pointer
+ * Description: use pointers to swap values
  */
 void swap(int *pa, int *pb)
 {
