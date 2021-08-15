@@ -23,5 +23,7 @@ int main(void)
                 fflush(stdout);
         }
         write(1, "\n", 1);
+        /* will output an inconsistent behavior */
+        
         return(0);
 }
