@@ -54,15 +54,18 @@ char *_getenv(const char *name, char **envp)
         {
                 for (; envp[i][j] != '='; j++)
                 {
-                        /* find ascii 61 and star strcmp */
+                        /* find ascii 61 and start strcmp */
+                        _strcmp(name,envp[i] + j);
                         if (compare == 0)
-                        /* found the environment */
-                        printf("compare: %d found\n", compare);
-                        printf("env: %s", envp[i] + name_len + 1);
-                        /* if not find, continue */
+                        {
+                                return(envp[i]);
+                                break;
+                        }
+                        continue;
                 }
 
         }
+        return (envp[i]);
 }
 
 /**
