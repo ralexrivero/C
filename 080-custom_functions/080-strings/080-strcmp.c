@@ -25,7 +25,8 @@ return (0);
 int main(void)
 {
         char *s1 = "PATH";
-        char *s2 = "PATHFINDER";
-        int comp = _strcmp(s1,s2);
+        char *s2[] = {"PATHFINDER"};
+        printf("s2: %s\n", s2[0]);
+        int comp = _strcmp(s1,s2[0]);
         printf("result: %d\n", comp);
 }
