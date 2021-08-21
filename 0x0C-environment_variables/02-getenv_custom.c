@@ -13,14 +13,6 @@ int _strlen(char *string)
 }
 
 /**
- * @brief get the value of a environmental variable
- * 
- * @param name name of the env. variable
- * @param envp pointer to env. variables
- * @return char* full path of env. variable
- */
-
-/**
  * _strcmp - compares string 1 with string 2
  * Description: compares two strings
  * Return: 0 if equal or not 0 if are different
@@ -42,12 +34,19 @@ s2++;
 return (0);
 }
 
+/**
+ * @brief get the value of a environmental variable
+ * 
+ * @param name name of the env. variable
+ * @param envp pointer to env. variables
+ * @return char* full path of env. variable
+ */
+
 char *_getenv(const char *name, char **envp)
 {
         int i = 0, j = 0, name_len = 0, compare = 0;
 
         name_len = _strlen((char*)name);
-        printf("%d\n", name_len);
 
         /* run trough the env variables */
         for (;envp[i] != NULL; i++)
@@ -55,17 +54,16 @@ char *_getenv(const char *name, char **envp)
                 for (; envp[i][j] != '='; j++)
                 {
                         /* find ascii 61 and start strcmp */
-                        _strcmp(name,envp[i] + j);
+                        compare = _strcmp(name,envp[i]);
                         if (compare == 0)
                         {
                                 return(envp[i]);
-                                break;
                         }
-                        continue;
+                        break;
                 }
 
         }
-        return (envp[i]);
+        return (NULL);
 }
 
 /**
@@ -84,6 +82,6 @@ int main(int argc, char *argv[], char *envp[])
 
         char *fullpath = _getenv("PATH", envp);
 
-        printf("PATH: %s\n", fullpath);
+        printf("%s\n", fullpath);
         return (0);
 }
