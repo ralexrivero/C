@@ -13,7 +13,7 @@ int main(void)
         /* shrink memory */
 
         arr = realloc(arr, 128 * sizeof(int));
-        if (arr ==NULL)
+        if (arr == NULL)
         {
                 perror("realloc");
                 exit (EXIT_FAILURE);

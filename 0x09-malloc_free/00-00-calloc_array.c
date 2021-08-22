@@ -5,6 +5,10 @@ int main(void)
 {
         int *arr = calloc(256, sizeof(int)), i =0;
         /* allocate memory and set every value to 0 */
+        if (arr == NULL)
+        {
+                return (1);
+        }
         
         for (; i < 256; i ++)
         {
