@@ -2,22 +2,22 @@
 
 char *name(void)
 {
-        char name[] = "John Doe";
+	char name[] = "John Doe";
 
-        return (name);
+	return (name);
 }
 
 char *country(void)
 {
-        static char country[] = "USA";
+	static char country[] = "USA";
 
-        return (country);
+	return (country);
 }
 
 int main(void)
 {
-        printf("Name: %s\n", name());
-        printf("Country: %s\n", country());
+	printf("Name: %s\n", name());
+	printf("Country: %s\n", country());
 }
 
 /**
