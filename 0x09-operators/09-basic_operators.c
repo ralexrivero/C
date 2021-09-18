@@ -34,6 +34,7 @@ int main(void)
 	printf("%d\12", a);
 	
 	/* pre increment and pre decrement value */
+	/* affect the value before use */ 
 	printf("%d, %d\12", ++a, --b);
 
 	return (0);
