@@ -32,5 +32,19 @@ int main(void)
 				printf("%3d\12",a);
 			a++;
 		}
+
+	a = 0;
+
+	putchar('\12');
+
+	while (a <= 20)
+	{
+		if (a <= 5 || a >= 16 || a == 10)
+			putchar('*');
+		else
+			putchar(' ');
+		printf("%3d\12", a);
+		a++;
+	}
 	return (0);
 }
