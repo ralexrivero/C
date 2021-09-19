@@ -3,7 +3,7 @@
 int main(void)
 {
 	unsigned short int a, b;
-
+	/* asign values in decimal or hexadecimal */
 	a  = 0xAAAA;
 
 	printf("Start: %04X - %s\12", a, binString(a));
