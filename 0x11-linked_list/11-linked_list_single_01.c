@@ -2,26 +2,26 @@
 #include <stdlib.h>
 
 typedef struct Node {
-        int x;
-        struct Node* next;
+	int x;
+	struct Node* next;
 } Node;
 
 int main()
 {
-        Node root;
+	Node root;
 
-        root.x = 15;
-        root.next = malloc(sizeof(Node));
-        if (!root.next)
-        return(0);
+	root.x = 15;
+	root.next = malloc(sizeof(Node));
+	if (!root.next)
+	return(0);
 
-        root.next->x = -2;
-        root.next->next = NULL;
+	root.next->x = -2;
+	root.next->next = NULL;
 
-        printf("First: %d\n", root.x);
-        printf("Second: %d\n", root.next->x);
+	printf("First: %d\n", root.x);
+	printf("Second: %d\n", root.next->x);
 
-        free(root.next);
+	free(root.next);
 
-        return(0);
+	return(0);
 }

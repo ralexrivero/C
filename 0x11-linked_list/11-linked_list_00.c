@@ -26,7 +26,10 @@ int main(int argc, char **argv)
         printf("First: %d\n", root.x);
         printf("Second: %d\n", elem2.x);
         /* access the second element by dereference */
+        /* next is a pointer to the second element */
         printf("Second: %d\n", root.next->x);
+        /* dereference to access */
+        printf("Second: %d\n", (*root.next).x);
 
         return (0);
 }
