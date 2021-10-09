@@ -5,14 +5,14 @@ int main(void)
 	char c = 0;
 
 	printf("Select your choice:\n");
-	printf("A - Piza\nB - Chesseburger\nC - Sushi\n");
+	printf("A - Pizza\nB - Chesseburger\nC - Sushi\n");
 	scanf("%c", &c);
 
 	switch (c)
 	{
 		case 'A':
 		case 'a':
-			printf("Great! a piza!\n");
+			printf("Great! a pizza!\n");
 			break;
 		case 'B':
 		case 'b':
