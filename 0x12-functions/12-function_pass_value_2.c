@@ -9,7 +9,7 @@ int main(void)
 {
     int n = 5;
 
-    printf("Befor: %d\n", n);
+    printf("Before: %d\n", n);
     multiply(n);
     printf("After: %d\n", n);
     return (0);
