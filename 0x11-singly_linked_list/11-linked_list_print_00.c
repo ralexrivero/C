@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 typedef struct Node {
-        int x;
-        struct Node* next;
+	int x;
+	struct Node* next;
 } Node;
 
 int main()
@@ -24,8 +24,8 @@ int main()
        printf("while:\n");
        while (current != NULL)
        {
-               printf("%d\n", current->x);
-               current = current->next;
+	       printf("%d\n", current->x);
+	       current = current->next;
        }
        printf("for:\n");
        for (Node* current = &root; current != NULL; current = current->next)

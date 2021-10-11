@@ -35,7 +35,7 @@ void insert_end(node **root, int value)
 	node* current = *root;
 	while (current->next != NULL)
 	{
-		current = current->next;        
+		current = current->next;
 	}
 	current->next = new_node;
 }
