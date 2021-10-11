@@ -5,13 +5,16 @@ int main(void)
 	unsigned int row = 0;
 	char column = 0;
 
-	for (; row < 10; row++)
+	while(row <= 10)
 	{
-		for(column = 'A'; column <= 'J'; column++)
+		column = 'a';
+		while(column <= 'j')
 		{
-			printf("%2d%c\t", row, column);
+			printf("%2d%c\t",row, column);
+			column++;
 		}
 		putchar('\n');
+		row++;
 	}
 	return (0);
 }
