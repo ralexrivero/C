@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void sum(void)
+void div(void)
 {
 	int a = 0, b = 0;
 
@@ -12,7 +12,7 @@ void sum(void)
 
 int main (void)
 {
-	sum();
+	div();
 	printf("done\n");
 
 	return (0);
