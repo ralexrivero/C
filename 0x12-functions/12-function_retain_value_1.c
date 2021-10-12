@@ -14,6 +14,8 @@ int funct_a(void)
 int funct_b(void)
 {
 	/* the static variable retain the value */
+	/* this statement does not run again and retain the previous value */
+	/* variable must be initilized in this way */
 	static int b = 0;
 	b += 16;
 	printf("In funct_b, b: %d", b);
